@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.Group?>
+
+<Pane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	<Pane layoutX="20" layoutY="20" fx:id="saving">
+		<VBox>
+			<Label fx:id="startLabel">Start(yyyy-MM-dd HH:mm:ss):</Label>
+			<TextField fx:id="start"></TextField>
+			<Label fx:id="durationLabel">Duration (HH:mm:ss):</Label>
+			<TextField fx:id="duration"></TextField>
+			<Label>Place:</Label>
+			<TextField fx:id="place"></TextField>
+			<Label>Description:</Label>
+			<TextField fx:id="description"></TextField>
+			<Label>Members:</Label>
+			<TextArea fx:id="members"></TextArea>
+			<HBox>
+				<Button onAction="#saveClick">Save</Button>
+				<Button onAction="#nextClick">Next</Button>
+				<Button onAction="#loadGoClick">Loading</Button>
+				<Button onAction="#listGo">Current events</Button>
+			</HBox>
+		</VBox>
+	</Pane>
+	<Pane layoutX="20" layoutY="20" fx:id="loading" visible="false">
+		<VBox>
+			<TextArea editable="false" fx:id="loadedInfo" id="text">Please, load iformation from file</TextArea>
+			<HBox>
+				<Button onAction="#saveGoClick">Saving</Button>
+				<Button onAction="#loadClick">Load</Button>
+				<Button onAction="#listGo">Current events</Button>
+			</HBox>
+		</VBox>
+	</Pane>
+	<Pane layoutX="20" layoutY="20" fx:id="listElements" visible="false">
+		<VBox>
+			<TextArea editable="false" fx:id="listArea" id="text">You didn't create any event.</TextArea>
+			<HBox>
+				<Button onAction="#saveGoClick">Saving</Button>
+				<Button onAction="#loadGoClick">Loading</Button>
+			</HBox>
+		</VBox>
+	</Pane>
+</Pane>

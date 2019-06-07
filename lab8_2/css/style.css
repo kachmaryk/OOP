@@ -1,0 +1,15 @@
+.root {
+	-fx-background-color: #c0ffee;
+}
+Label{
+	-fx-text-fill: #3EA689;
+	-fx-font-size: 1em;
+}
+Button {
+	-fx-font-size: 1em;
+}
+#text {
+	-fx-text-fill: #000;
+	-fx-background-color: #fff;
+	-fx-padding: 20px;
+}
